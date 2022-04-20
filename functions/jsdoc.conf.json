@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    "node_modules/jsdoc-tsimport-plugin/index.js",
+    "plugins/markdown",
+    "node_modules/jsdoc-namespace-resolver/index.js"
+  ],
+  "source": {
+    "include": ["."],
+    "exclude": ["node_modules", "out"],
+    "includePattern": ".+\\.js(doc|x)?$"
+  },
+  "opts": {
+    "recurse": true,
+    "template": "node_modules/docdash",
+    "readme": "JSDOC.md"
+  },
+  "docdash": {
+    "shortenTypes": true,
+    "typedefs": true,
+    "search": true
+  }
+}
